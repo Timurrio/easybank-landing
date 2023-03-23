@@ -1,4 +1,5 @@
 import './App.scss';
+import { FeaturesSection } from './components/FeaturesSection/FeaturesSection';
 import { IntroSection } from './components/IntroSection/IntroSection';
 import Navbar from './components/Navbar/Navbar';
 
@@ -7,6 +8,8 @@ function App() {
     <div className="App">
       <Navbar />
       <IntroSection />
+      <FeaturesSection />
+
     </div>
   );
 }
