@@ -1,0 +1,16 @@
+@import '../../variables.scss';
+
+.button {
+    color: white;
+    font-size: 18px;
+    font-family: 'Josefin Sans', sans-serif;
+    background: linear-gradient(90deg, $limeGreen, $brightCyan);
+    padding: 15px;
+    border: none;
+    border-radius: 20px;
+    width: 200px;
+
+    &:hover {
+        opacity: 0.85;
+    }
+}

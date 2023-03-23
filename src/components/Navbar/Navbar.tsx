@@ -1,4 +1,5 @@
 import logo from "../../images/logo.svg"
+import { ReqInviteBtn } from "../ReqInviteBtn/ReqInviteBtn"
 import styles from "./Navbar.module.scss"
 
 const Navbar = () => {
@@ -12,7 +13,7 @@ const Navbar = () => {
                 <li>Blog</li>
                 <li>Careers</li>
             </ul>
-            <button>Request Invite</button>
+            <ReqInviteBtn />
         </div>
     )
 }

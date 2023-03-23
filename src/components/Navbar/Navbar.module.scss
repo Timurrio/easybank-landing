@@ -1,19 +1,43 @@
+@import '../../variables.scss';
+
+
 .navbar {
     background-color: white;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 30px 100px 30px 100px;
+    padding: 0px 100px;
+    z-index: 99;
+    position: fixed;
+    width: 100%;
 }
 
 .navbar__links {
     display: flex;
     list-style: none;
-    color: gray;
+    color: $grayishBlue;
     flex-direction: row;
 
     li {
-        padding: 15px;
+        position: relative;
+        padding: 30px;
+
+        &:hover {
+            color: $darkBlue;
+
+
+        }
+
+        &:hover::after {
+            position: absolute;
+            content: "";
+            bottom: 0;
+            left: 10%;
+            background: linear-gradient(90deg, $limeGreen, $brightCyan);
+            width: 80%;
+            height: 4px;
+        }
     }
+
 }
