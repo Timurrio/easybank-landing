@@ -1,0 +1,22 @@
+@import '../../variables.scss';
+
+.container {
+    position: relative;
+    width: 100%;
+    background-color: #FAFAFA;
+    padding: 100px 100px;
+}
+
+.header {
+    font-size: 40px;
+    margin: 30px 0px;
+    color: $darkBlue;
+    font-weight: normal;
+}
+
+.articlesBlock {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: 100px;
+}
