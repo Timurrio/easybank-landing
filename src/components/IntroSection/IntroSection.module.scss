@@ -9,24 +9,33 @@
 }
 
 .mockupImage {
+    background-image: url("../../images/image-mockups.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
     position: absolute;
+
     // overflow: hidden;
     transform: translateX(150px);
-    height: 100%;
-    max-width: 60%;
+    height: 969px;
+    max-width: 50%;
+    width: 50%;
+    min-width: 625px;
     z-index: 2;
     right: 0%;
 }
 
 .backgroundImage {
+    background-image: url("../../images/bg-intro-desktop.svg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
     position: absolute;
+
     // overflow: hidden;
-    right: 0%;
+    right: -5%;
     transform: translateX(300px) translateY(-100px);
-    height: auto;
-    height: 100%;
-    max-width: 80%;
-    min-width: 50%;
+    height: 1034px;
+    width: 75%;
+    min-width: 800px;
     z-index: 1;
 }
 
@@ -37,7 +46,7 @@
     flex-direction: column;
     margin-left: 100px;
     padding: 10px;
-    width: 30%;
+    width: 40%;
     left: 0;
     z-index: 3;
 
@@ -54,30 +63,62 @@
     }
 }
 
+@media screen and (max-width: 1150px) {
+    .textBlock {
+        margin-left: 20px;
+
+        .textBlock__header {
+            font-size: 45px;
+        }
+
+        .textBlock__text {
+            width: 70%;
+            font-size: 22px;
+        }
+    }
+
+}
+
 @media screen and (max-width: 770px) {
     .container {
         justify-content: center;
     }
 
     .mockupImage {
-        display: none;
+        left: 50%;
+        top: 0%;
+        transform: translateX(-50%);
+        height: 450px;
+        width: 90%;
+        min-width: 0px;
+        max-width: none;
     }
 
     .backgroundImage {
-        display: none;
+        background-image: url("../../images/bg-intro-mobile.svg");
+        left: 0%;
+        margin-top: 80px;
+        transform: none;
+        height: 450px;
+
     }
 
     .textBlock {
+        margin-top: auto;
         margin-left: 0px;
+        height: 40%;
         width: 85%;
         align-items: center;
 
         .textBlock__header {
-            font-size: 50px;
+            width: 100%;
+            font-size: 40px;
             text-align: center;
         }
 
         .textBlock__text {
+            font-size: 22px;
+            width: 100%;
             text-align: center;
         }
     }
