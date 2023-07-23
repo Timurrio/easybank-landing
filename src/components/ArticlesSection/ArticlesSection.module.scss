@@ -20,3 +20,21 @@
     flex-direction: row;
     margin-bottom: 100px;
 }
+
+@media screen and (max-width: 1150px) {
+    .container {
+        padding: 100px 20px;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .header {
+        text-align: center;
+    }
+
+    .articlesBlock {
+        flex-direction: column;
+        align-items: center;
+    }
+
+}

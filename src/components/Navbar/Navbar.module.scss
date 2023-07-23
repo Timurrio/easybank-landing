@@ -7,10 +7,15 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 0px 100px;
+    padding: 0px 5%;
+    height: 80px;
     z-index: 99;
     position: fixed;
     width: 100%;
+}
+
+.navbar__logo {
+    width: auto;
 }
 
 .navbar__links {
@@ -18,15 +23,17 @@
     list-style: none;
     color: $grayishBlue;
     flex-direction: row;
+    margin: 0px 5%;
 
     li {
         position: relative;
-        padding: 30px;
+        padding: 30px 20px;
+        transition: 0.15s all;
+
 
         &:hover {
             color: $darkBlue;
-
-
+            cursor: pointer;
         }
 
         &:hover::after {
@@ -40,4 +47,24 @@
         }
     }
 
+}
+
+@media screen and (max-width: 1150px) {
+    .navbar {
+        padding: 0 10px;
+    }
+
+    .navbar__links {
+        margin: 0px 15px;
+
+        li {
+            padding: 30px 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .navbar__links {
+        display: none;
+    }
 }

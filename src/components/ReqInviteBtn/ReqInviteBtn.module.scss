@@ -9,8 +9,16 @@
     border: none;
     border-radius: 20px;
     width: 200px;
+    white-space: nowrap;
 
     &:hover {
         opacity: 0.85;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .invisible {
+        display: none;
     }
 }

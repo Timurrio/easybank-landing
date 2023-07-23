@@ -4,9 +4,9 @@
 .container {
     border-radius: 10px;
     background-color: white;
-    width: 20%;
-    height: 500px;
-    margin: 0px 20px;
+    margin: 0px 1%;
+    min-width: 185px;
+    max-width: 25%;
 }
 
 .articleImg {
@@ -26,6 +26,12 @@
     color: $darkBlue;
     font-size: 22px;
     font-weight: 700;
+    transition: 0.15s all;
+
+    &:hover {
+        color: $limeGreen;
+        cursor: pointer;
+    }
 }
 
 .articleText {
@@ -35,4 +41,11 @@
 
 .textBlock {
     padding: 15px;
+}
+
+@media screen and (max-width: 770px) {
+    .container {
+        margin-top: 50px;
+        max-width: 95%;
+    }
 }

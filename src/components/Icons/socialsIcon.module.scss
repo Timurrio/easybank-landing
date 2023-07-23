@@ -4,10 +4,13 @@
 .logo {
     height: 25px;
     width: 25px;
-}
+    transition: 0.15s all;
 
-.logoPath {
+
     &:hover {
-        fill: $limeGreen;
+        .logoPath {
+            fill: $limeGreen;
+
+        }
     }
 }

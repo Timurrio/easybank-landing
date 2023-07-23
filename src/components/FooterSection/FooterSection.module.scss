@@ -39,16 +39,23 @@
 
 
     .linksBlock__linksList {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-auto-rows: minmax(50px, auto);
+        // display: grid;
+        // grid-template-columns: repeat(2, 1fr);
+        // grid-auto-rows: minmax(50px, auto);
+        display: flex;
+        flex-wrap: wrap;
         list-style: none;
+        transition: 0.15s all;
+
+        //width: 450px;
 
 
         .linksBlock__linksList__link {
             padding: 15px;
-            margin-left: 50px;
             font-size: 20px;
+            width: 50%;
+            // display: inline-block;
+
         }
 
         .linksBlock__linksList__link:hover {
@@ -59,29 +66,78 @@
 
 }
 
-
-
 .copyrightBlock {
     margin-left: auto;
 
+
     .copyrightBlock__copyright {
-        margin-top: 50px;
+        margin-top: 120px;
         color: $grayishBlue;
+    }
+
+    button {
+        margin-top: 20px;
+        float: right;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .container {
+        padding: 50px 10px;
+    }
+
+    .linksBlock {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .linksBlock__linksList {
+        font-size: 16px;
+
     }
 }
 
 @media screen and (max-width: 770px) {
+    .icons {
+        margin-top: 25px;
+    }
+
+
     .container {
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 
-    .linksBlock__linksList {
+    .linksBlock {
+        .linksBlock__linksList {
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            //width: 150px;
+            margin-top: 10px;
+
+            .linksBlock__linksList__link {
+                width: 100%;
+                margin-top: 10px;
+                font-size: 20px;
+                white-space: nowrap;
+
+            }
+        }
+    }
+
+    .copyrightBlock {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        grid-template-columns: 1 1fr;
+        align-items: center;
+        margin-left: 0;
+
+        .copyrightBlock__copyright {
+            margin-top: 50px;
+        }
 
     }
+
 }

@@ -1,7 +1,13 @@
 import styles from './ReqInviteBtn.module.scss'
 
-export const ReqInviteBtn = () => {
+interface ReqInviteBtnProps {
+    isVisible?: boolean
+}
+
+export const ReqInviteBtn = ({ isVisible }: ReqInviteBtnProps) => {
+
+
     return (
-        <button className={styles.button}>Request Invite</button>
+        <button className={`${styles.button} ${isVisible === false ? styles.invisible : ""}`}>Request Invite</button>
     )
 }
