@@ -105,20 +105,22 @@
 
     .textBlock {
         margin-top: auto;
+        margin-bottom: 50px;
         margin-left: 0px;
-        height: 40%;
-        width: 85%;
+        height: 350px;
+        width: 95%;
         align-items: center;
 
         .textBlock__header {
             width: 100%;
-            font-size: 40px;
+            font-size: 33px;
             text-align: center;
         }
 
         .textBlock__text {
-            font-size: 22px;
+            font-size: 20px;
             width: 100%;
+            margin: 20px 0px;
             text-align: center;
         }
     }

@@ -1,10 +1,10 @@
-import { useState } from "react"
 import logo from "../../images/logo.svg"
 import { ReqInviteBtn } from "../ReqInviteBtn/ReqInviteBtn"
 import styles from "./Navbar.module.scss"
+import { FaBars } from "react-icons/fa"
+import { FaXmark } from "react-icons/fa6"
 
-const Navbar = () => {
-    const [isActive, setIsActive] = useState(true)
+const Navbar = ({ isActive, setIsActive }: { isActive: boolean, setIsActive: React.Dispatch<React.SetStateAction<boolean>> }) => {
 
     return (
         <div className={styles.navbar}>
@@ -17,6 +17,9 @@ const Navbar = () => {
                 <li>Careers</li>
             </ul>
             <ReqInviteBtn isVisible={false} />
+            <button className={styles.mobileNavigationButton} onClick={() => setIsActive(isActive => !isActive)}>
+                {isActive ? <FaXmark /> : <FaBars />}
+            </button>
         </div>
     )
 }

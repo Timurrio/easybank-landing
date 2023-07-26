@@ -9,9 +9,9 @@
     justify-content: space-between;
     padding: 0px 5%;
     height: 80px;
-    z-index: 99;
+    z-index: 999;
     position: fixed;
-    width: 100%;
+    width: 100vw;
 }
 
 .navbar__logo {
@@ -46,7 +46,10 @@
             height: 4px;
         }
     }
+}
 
+.mobileNavigationButton {
+    display: none;
 }
 
 @media screen and (max-width: 1150px) {
@@ -64,7 +67,27 @@
 }
 
 @media screen and (max-width: 770px) {
+
+
     .navbar__links {
         display: none;
+        opacity: 0;
+    }
+
+    .mobileNavigationButton {
+        border: none;
+        background: none;
+        padding: 0;
+        margin-top: 6px;
+        display: block;
+        margin-left: auto;
+        font-size: 1.5rem;
+        align-self: center;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+
     }
 }
