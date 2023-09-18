@@ -3,18 +3,16 @@
 .container {
     background-color: #FAFAFA;
     display: flex;
-    width: 100%;
+    width: 100vw;
     height: 870px;
     overflow: hidden;
 }
 
 .mockupImage {
+    position: absolute;
     background-image: url("../../images/image-mockups.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    position: absolute;
-
-    // overflow: hidden;
     transform: translateX(150px);
     height: 969px;
     max-width: 50%;
@@ -25,11 +23,10 @@
 }
 
 .backgroundImage {
+    position: absolute;
     background-image: url("../../images/bg-intro-desktop.svg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    position: absolute;
-
     // overflow: hidden;
     right: -5%;
     transform: translateX(300px) translateY(-100px);
@@ -91,7 +88,7 @@
         height: 450px;
         width: 90%;
         min-width: 0px;
-        max-width: none;
+        max-width: 100vw;
     }
 
     .backgroundImage {
@@ -100,7 +97,9 @@
         margin-top: 80px;
         transform: none;
         height: 450px;
-
+        min-width: 300px;
+        width: 100%;
+        max-width: 770px;
     }
 
     .textBlock {
